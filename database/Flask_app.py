@@ -4,6 +4,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
+from datetime import datetime
 
 # python -m http.server [PORT]
 
@@ -55,20 +56,20 @@ def global1_func():
 
     """Return a list of global1 data"""
     # Query all passengers
-    results = session.query(global1.No, global1.movie, global1.week_at_Top10,global1.hours_seen).all()
+    results = session.query(global1.No, global1.movie, global1.week_at_Top10,global1.hours_seen,global1.duration,global1.views).all()
 
     session.close()
 
     # Create a dictionary from the row data and append to a list of all_passengers
     all_data = []
-    for No, movie, week_at_Top10, hours_seen in results:
+    for No, movie, week_at_Top10, hours_seen, duration,views in results:
         data_dict = {}
         data_dict["No"] = No
         data_dict["movie"] = movie
         data_dict["week_at_Top10"] = week_at_Top10
         data_dict["hours_seen"] = hours_seen
-        #data_dict["duration"] = duration
-        #data_dict["views"] = views
+        data_dict["duration"] = str(duration)
+        data_dict["views"] = views
         all_data.append(data_dict)
 
     return jsonify(all_data)
