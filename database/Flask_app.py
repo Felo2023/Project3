@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
 from datetime import datetime
+from flask_cors import CORS
 
 # python -m http.server [PORT]
 
@@ -30,7 +31,7 @@ countries=Base.classes.countries
 # Flask Setup
 #################################################
 app = Flask(__name__)
-
+CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:8004"}})
 #################################################
 # Flask Routes
 #################################################

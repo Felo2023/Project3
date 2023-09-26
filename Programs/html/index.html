@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Movie Dashboard NETFLIX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="tabs">
+    <button id="global-tab">Global</button>
+    <button id="canada-tab">Canada</button>
+    <button id="egypt-tab">Egypt</button>
+</div>
+<div class="table-container">
+    <table id="movie-table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Movie</th>
+                <th>Weeks at Top 10</th>
+                <th>Hours Seen</th>
+                <th>Duration</th>
+                <th>Views</th>
+            </tr>
+        </thead>
+        <tbody id="movie-data">
+            <!-- Data will be populated here -->
+        </tbody>
+    </table>
+    <button id="previous-button">Next week</button>
+    <button id="next-button">Previous week</button>
+</div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./Javascript/Readflaskdata3.0.js"></script> <!-- Tu archivo de JavaScript personalizado -->
+</body>
+</html>
+
+   
