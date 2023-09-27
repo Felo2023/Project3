@@ -1,0 +1,123 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a dark background color for the entire page */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Style the header and tabs */
+.header {
+    background-color: #141414;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+}
+
+.tab-button.active {
+    background-color: #e50914;
+    color: #fff;
+}
+
+/* Style the main content container */
+#main-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #141414;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the table */
+#movie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #141414;
+}
+
+#movie-table th,
+#movie-table td {
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+#movie-table th {
+    background-color: #e50914;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the "Update Table" button */
+#update-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#update-button:hover {
+    background-color: #ff181c;
+}
+
+/* Style any other elements on your page as needed */
+
+/* Style the bar chart container */
+#bar-chart {
+    background-color: #141414;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the chart title */
+.chart-title {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Style the plotly chart */
+.plotly-chart {
+    width: 200%;
+    height: 500px; /* Adjust the height as needed */
+    background-color: #141414;
+}
+
+/* Add this to your styles.css file */
+
+.scroll-container {
+    height: 100vh; /* Set a fixed height for the container (e.g., 100% of viewport height) */
+    overflow-y: scroll; /* Add vertical scroll when content overflows */
+}
+

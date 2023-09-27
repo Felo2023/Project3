@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="scroll-container">
+    <div class="header">
+    <h1>Top 10 Movies NETFLIX</h1>
   <div class="tabs">
     <button id="global-tab">Global</button>
     <button id="canada-tab">Canada</button>
@@ -14,7 +17,8 @@
     <button id="uk-tab">United Kingdom</button> <!-- New tab -->
     <button id="australia-tab">Australia</button> <!-- New tab -->
 </div>
-<div class="table-container">
+</div>
+<div class="main-container">
     <table id="movie-table">
         <thead>
             <tr>
@@ -33,11 +37,16 @@
     <button id="previous-button">Next week</button>
     <button id="next-button">Previous week</button>
 </div>
-<div id="bar-chart"></div>
+<div id="bar-chart">
+    <h2 class="chart-title">Top 10 Movies - Views</h2>
+    <div id="your-plotly-chart" class="plotly-chart"></div>
+</div>
+ <div id="map-container" style="width: 300px; height: 200px;"></div>
+</div>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="./Javascript/Readflaskdata4.0.js"></script> <!-- Tu archivo de JavaScript personalizado -->
+    <script src="./Javascript/Readflaskdata5.0.js"></script> <!-- Tu archivo de JavaScript personalizado -->
 </body>
 </html>
 

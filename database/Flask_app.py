@@ -68,9 +68,9 @@ def global1_func():
         data_dict["No"] = No
         data_dict["movie"] = movie
         data_dict["week_at_Top10"] = week_at_Top10
-        data_dict["hours_seen"] = hours_seen
+        data_dict["hours_seen"] = round(hours_seen,2)
         data_dict["duration"] = str(duration)
-        data_dict["views"] = views
+        data_dict["views"] = round(views,2)
         all_data.append(data_dict)
 
     return jsonify(all_data)
