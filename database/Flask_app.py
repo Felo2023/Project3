@@ -6,6 +6,7 @@ from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
 from datetime import datetime
 from flask_cors import CORS
+import pandas as pd
 
 # python -m http.server [PORT]
 
@@ -31,7 +32,7 @@ countries=Base.classes.countries
 # Flask Setup
 #################################################
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:8004"}})
+CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:8005"}})
 #################################################
 # Flask Routes
 #################################################
@@ -42,6 +43,7 @@ def welcome():
     return (
         f"Available Routes:!!!!!!<br/>"
         f"/api/v1.0/global1<br/>"
+        f"/api/v1.0/global2<br/>"
         f"/api/v1.0/canada<br/>"
         f"/api/v1.0/united_kingdom<br/>"
         f"/api/v1.0/australia<br/>"
@@ -161,6 +163,32 @@ def australia_func():
 
     return jsonify(all_data)
 
+@app.route("/api/v1.0/global2")
+def global2_func():
+    # Create our session (link) from Python to the DB
+    session = Session(engine)
+
+    """Return a list of global1 data"""
+    # Query all passengers
+    results = session.query(global1.No, global1.movie, global1.week_at_Top10,global1.hours_seen,global1.duration,global1.views).all()
+
+    session.close()
+
+    # Create a dictionary from the row data and append to a list of all_passengers
+    all_data = []
+    df = pd.DataFrame(results)
+    # Group by 'Movie Name' and find the maximum 'Week at Top 10 Score' for each movie
+    max_week_scores = df.groupby('movie')['week_at_Top10'].max().reset_index()
+    max_week_scores=max_week_scores.sort_values('week_at_Top10',ascending=False)
+    # Merge the original DataFrame with the maximum week scores to get the desired rows
+    i=1
+    for index, row in max_week_scores.iterrows():
+            result_dict={}
+            result_dict = row.to_dict()
+            result_dict['No']=i
+            all_data.append(result_dict)
+            i=i+1
+    return jsonify(all_data)
 
 if __name__ == '__main__':
     app.run(debug=True)

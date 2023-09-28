@@ -1,0 +1,231 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a dark background color for the entire page */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Style the main content container */
+#main-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #141414;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the table */
+#movie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #141414;
+}
+
+#movie-table th,
+#movie-table td {
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+#movie-table th {
+    background-color: #e50914;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the "Update Table" button */
+#next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#next-button:hover {
+    background-color: #ff181c;
+}
+
+/* Style the "Update Table" button */
+#previous-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#previous-button:hover {
+    background-color: #ff181c;
+}
+
+.scroll-container {
+    height: 100vh; /* Set a fixed height for the container (e.g., 100% of viewport height) */
+    overflow-y: scroll; /* Add vertical scroll when content overflows */
+}
+
+/*Second table*/
+/* Style the table */
+#movie-table2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #141414;
+}
+
+#movie-table2 th,
+#movie-table2 td {
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+#movie-table2 th {
+    background-color: #e50914;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the "Update Table" button */
+#next-button2 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#next-button2:hover {
+    background-color: #ff181c;
+}
+
+/* Style the "Update Table" button */
+#previous-button2 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#previous-button2:hover {
+    background-color: #ff181c;
+}
+
+
+/*Format to upper buttons (tab buttons)*/
+
+/* Style the header and tabs */
+.header {
+    background-color: #141414;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#global-tab {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#global-tab:hover {
+    background-color: #ff181c;
+}
+
+#canada-tab {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#canada-tab:hover {
+    background-color: #ff181c;
+}
+
+#egypt-tab {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#egypt-tab:hover {
+    background-color: #ff181c;
+}
+
+#uk-tab {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#uk-tab:hover {
+    background-color: #ff181c;
+}
+
+#australia-tab {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#australia-tab:hover {
+    background-color: #ff181c;
+}
+
+

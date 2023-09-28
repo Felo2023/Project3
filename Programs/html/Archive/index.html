@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bellybutton Biodiversity</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Movie Dashboard NETFLIX</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>Test Subject ID No.:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div id="bar"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="./static/js/app.js"></script>
-  <script src="./static/js/bonus.js"></script>
-
+    <div class="scroll-container">
+    <div class="header">
+    <h1>Top 10 Movies NETFLIX</h1>
+  <div class="tabs">
+    <button id="global-tab">Global</button>
+    <button id="canada-tab">Canada</button>
+    <button id="egypt-tab">Egypt</button>
+    <button id="uk-tab">United Kingdom</button> <!-- New tab -->
+    <button id="australia-tab">Australia</button> <!-- New tab -->
+</div>
+</div>
+<div class="main-container">
+    <table id="movie-table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Movie</th>
+                <th>Weeks at Top 10</th>
+                <th>Hours Seen</th>
+                <th>Duration</th>
+                <th>Views</th>
+            </tr>
+        </thead>
+        <tbody id="movie-data">
+            <!-- Data will be populated here -->
+        </tbody>
+    </table>
+    <button id="previous-button">Next week</button>
+    <button id="next-button">Previous week</button>
+</div>
+<div id="bar-chart">
+    <h2 class="chart-title">Top 10 Movies - Views</h2>
+    <div id="your-plotly-chart" class="plotly-chart"></div>
+</div>
+ <div id="map-container" style="width: 300px; height: 200px;"></div>
+</div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./Javascript/Readflaskdata5.0.js"></script> <!-- Tu archivo de JavaScript personalizado -->
 </body>
-
 </html>
+
+   

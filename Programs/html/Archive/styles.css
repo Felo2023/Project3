@@ -13,10 +13,11 @@ body {
     overflow: hidden; /* Prevent horizontal scrollbar */
 }
 
+
 /* Style the header and tabs */
 .header {
     background-color: #141414;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -72,7 +73,7 @@ body {
 }
 
 /* Style the "Update Table" button */
-#update-button {
+#next-button {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #e50914;
@@ -84,7 +85,24 @@ body {
     transition: background-color 0.3s ease;
 }
 
-#update-button:hover {
+#next-button:hover {
+    background-color: #ff181c;
+}
+
+/* Style the "Update Table" button */
+#previous-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#previous-button:hover {
     background-color: #ff181c;
 }
 
@@ -120,4 +138,64 @@ body {
     height: 100vh; /* Set a fixed height for the container (e.g., 100% of viewport height) */
     overflow-y: scroll; /* Add vertical scroll when content overflows */
 }
+
+
+/*Second table*/
+/* Style the table */
+#movie-table2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #141414;
+}
+
+#movie-table2 th,
+#movie-table2 td {
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+#movie-table2 th {
+    background-color: #e50914;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the "Update Table" button */
+#next-button2 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#next-button2:hover {
+    background-color: #ff181c;
+}
+
+/* Style the "Update Table" button */
+#previous-button2 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#previous-button2:hover {
+    background-color: #ff181c;
+}
+
+
+/*Format to upper buttons*/
 
